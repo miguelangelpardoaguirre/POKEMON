@@ -1,0 +1,156 @@
+a:hover{
+    color: brown;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 1100vh;
+    background-color: rgba(243, 243, 243, 0.952);
+}
+
+.imprimir img{
+    max-width: 200px;
+}
+
+.card{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.100);
+    font-weight: 600;
+    border-radius: 5vmax;
+}
+
+.tipos{
+    border-radius: 5vmax;
+    display: inline-block;
+    padding: .25rem .5rem;
+    text-transform: uppercase;
+
+}
+.titulo{
+    font-weight: 600;
+}
+
+header{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.100);
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+#logo{
+    height: 60px;
+}
+
+header nav img {
+height: 40px;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+#cuenta-carrito{
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height:20px;
+    text-align: center;
+
+}
+
+footer{
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.100);
+    text-align: center;
+    margin-top: auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 1em auto;
+}
+
+.btn{
+    border-radius: 100vmax;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+
+
+.todos{
+    background-color:blanchedalmond;
+}
+.normal{
+    background-color: rgb(188, 201, 119);
+}
+.fire{
+    background-color: rgb(250, 118, 30);
+}
+.water{
+    background-color: rgb(30, 149, 247);
+}
+.grass{
+    background-color: rgb(12, 192, 12);
+}
+.electric{
+    background-color: yellow;
+}
+.ice{
+    background-color: aqua;
+}
+.fighting{
+background-color: red;
+}
+.poison{
+    background-color: rgb(199, 15, 199);
+}
+.ground{
+    background-color: rgb(165, 112, 42);
+}
+.flying{
+    background-color: rgb(162, 0, 236);
+}
+.psychic{
+    background-color: rgb(252, 28, 103);
+}
+.bug{
+    background-color: greenyellow;
+}
+.rock{
+    background-color: rgb(192, 161, 22);
+}
+.ghost{
+    background-color: rgb(104, 26, 250);
+}
+
+.dragon{
+    background-color: rgb(180, 108, 247);
+}
+.steel{
+    background-color: rgb(184, 181, 181);
+}
+.fairy{
+    background-color: pink;
+}
+
