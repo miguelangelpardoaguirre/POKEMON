@@ -1,5 +1,5 @@
 a:hover{
-    color: brown;
+    color: red;
 }
 
 header nav{
@@ -41,6 +41,7 @@ header{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.100);
     margin-bottom: 2em;
     background-color: white;
+    padding: 1em 0;
 }
 
 #logo{
@@ -97,6 +98,9 @@ li{
     text-transform: uppercase;
 }
 
+.dropdown{
+    margin-bottom: 1em;
+}
 
 .todos{
     background-color:blanchedalmond;
