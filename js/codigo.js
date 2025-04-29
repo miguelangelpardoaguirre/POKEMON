@@ -24,7 +24,7 @@ function mostrarPokemon(poke) {
         <div class="card m-2 text-center" style="width: 15rem;">
             <img src="${poke.sprites.other["official-artwork"].front_default}" class="card-img-top mx-auto d-block" alt="${poke.name}">
             <div class="card-body">
-                <h5># ${poke.id}</h5>
+                <h5 class="titulo"># ${poke.id}</h5>
                 <h4 class="card-title titulo">${poke.name}</h4>
                 <h6 class="titulo"> ${tipos}</h6>
                 <!-- <p>${peso} kg / ${altura} m <p/> -->

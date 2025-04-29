@@ -1,6 +1,4 @@
-a:hover{
-    color: red;
-}
+
 
 header nav{
     display: flex;
@@ -13,7 +11,10 @@ body{
     display: flex;
     flex-direction: column;
     height: 1100vh;
-    background-color: rgba(243, 243, 243, 0.952);
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.638)),
+    url(../img/fondo3.jpg);
 }
 
 .imprimir img{
@@ -21,9 +22,10 @@ body{
 }
 
 .card{
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.100);
+    box-shadow: 0 3px 5px rgba(26, 26, 26, 0.582);
     font-weight: 600;
     border-radius: 5vmax;
+    background-color: rgba(238, 238, 238, 0.658);
 }
 
 .tipos{
@@ -38,10 +40,17 @@ body{
 }
 
 header{
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.100);
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.582);
     margin-bottom: 2em;
     background-color: white;
     padding: 1em 0;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.575),
+    rgba(165, 165, 165, 0.315)),
+    url(../img/fondo1.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    
 }
 
 #logo{
@@ -60,7 +69,7 @@ header nav div{
 
 a {
     text-decoration: none;
-    color: black;
+    color: aliceblue;
     
 }
 
@@ -98,8 +107,16 @@ li{
     text-transform: uppercase;
 }
 
+header .btn {
+    color:black;
+}
+
 .dropdown{
     margin-bottom: 1em;
+}
+
+.blanco{
+    color: white;
 }
 
 .todos{
@@ -152,13 +169,42 @@ background-color: red;
     background-color: rgb(180, 108, 247);
 }
 .steel{
-    background-color: rgb(184, 181, 181);
+    background-color: rgb(97, 96, 96);
 }
 .fairy{
     background-color: pink;
 }
 
-
 .gris2{
     color: rgb(83, 83, 83);
 }
+
+#menu{
+    display: none;
+}
+
+
+@media(max-width:570px){
+
+    .hamburguesa{
+        color: rgb(223, 8, 8);
+        font-size: 30px;
+    }
+
+    #menu:checked ~ .nav{
+        display: initial;
+    }
+
+    .nav{
+        display: none;
+        
+    }
+}
+
+@media(min-width:571px){
+    .hamburguesa{
+        display: none;
+    }
+}
+
+
