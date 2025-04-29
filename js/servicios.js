@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${item.cantidad}</td>
             <td>${item.precio.toLocaleString('es-CO')} COP</td>
             <td>${totalItem.toLocaleString('es-CO')} COP</td>
-            <td><button class="btn btn-sm btn-danger eliminar-item" data-index="${index}">Eliminar</button></td>
+            <td><button class="btn btn-sm btn-danger eliminar-item w-100" data-index="${index}">Eliminar</button></td>
         `;
         tabla.appendChild(fila);
     });
