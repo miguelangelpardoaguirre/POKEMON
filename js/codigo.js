@@ -47,7 +47,7 @@ function mostrarPokemon(poke) {
                 <!--utilizamos data-id para que js sepa que que informacion debe obtener al hacer click en el boton -->
 
                 <button 
-                    class="btn btn-danger agregar-carrito" 
+                    class="btn btn-danger agregar-carrito"
                     data-id="${poke.id}">
                     ${costo} COP
                 </button>
@@ -83,9 +83,13 @@ function mostrarPokemon(poke) {
         
         //guardamos en el localstorage "carrito"
         localStorage.setItem("carrito", JSON.stringify(carrito));
-    
+
+        //llamamos la funcion actualizar carrito
+        actualizarContadorCarrito();
+
         //envia una alerta indicando que se agrego al carrito
         alert(`${nombre} ha sido agregado al carrito.`);
+        
     });
 };
 
@@ -99,6 +103,8 @@ botones.forEach(boton => boton.addEventListener("click", (event)=>{
         .then((response) => response.json())
         .then(data=> {
 
+            //validamos si se esta oprimiendo algun boton para filtrar por tipo
+
             if (botonId == "ver-todos"){
                 mostrarPokemon(data)
             }else{
@@ -109,19 +115,32 @@ botones.forEach(boton => boton.addEventListener("click", (event)=>{
             }
         })
     }
-}))
+}));
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+//actualizamos el contador del carito con una funcion que llamamos cada que den agregar al carrito
+function actualizarContadorCarrito() {
 
-// Migrar ítems antiguos (sin cantidad) al nuevo formato
-carrito = carrito.map(item => {
-    if (!item.cantidad) {
-        return { ...item, cantidad: 1 };
-    }
-    return item;
-});
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-localStorage.setItem("carrito", JSON.stringify(carrito));
+    //utilizamos el objeto item para agregarle cantidad sin modificar el item original y utilizarlo en el carrito
+    carrito = carrito.map(item => {
+        
+        if (!item.cantidad) {
+            return { ...item, cantidad: 1 };
+        }
+        return item;
+    });
+    
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    //iniciamos el contador en 0
+    let totalCantidad = 0;
+    //vamos sumando al contador del carrito cuando se ejecute
+    carrito.forEach(item => {
+        totalCantidad += item.cantidad;
+    });
+    
+    document.querySelector("#cuenta-carrito").textContent = totalCantidad;
+};
+//actualiza el contador al cargar la página si ya hay datos en el carrito
+actualizarContadorCarrito()
 
-const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-document.querySelector("#cuenta-carrito").textContent = totalCantidad;
